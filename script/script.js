@@ -30,3 +30,8 @@ function updateVeiw() {
 function game(){
     
 };
+
+function show() {
+    document.getElementById().style.display = "block";        
+
+};

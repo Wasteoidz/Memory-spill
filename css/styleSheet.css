@@ -1,12 +1,21 @@
 #boardGame {
+    height: 400px;
+    width: 400px;
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: repeat(4, 105px);
+    justify-items: center;
+    background-color: aqua;
+    align-items: center;
+    margin: 20px;
 }
 .cards{
     background-color: rgb(236, 12, 12);
     width: 50px;
     height: 50px;
+    margin-right: 20px;
+    display: none;
+
 };
 /* #boardGame{
     display: grid;
