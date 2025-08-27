@@ -13,22 +13,8 @@
     background-color: rgb(236, 213, 12);
     width: 75px;
     height: 75px;
-};
-/* #boardGame{
-    display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px)
+}
 
-};
-
-
-.cardss {
-    
-    
-    border-radius: solid white 10px;
-    background-color: rgb(221, 139, 139);
-    grid-template-columns: repeat(4, 5px);
-    grid-template-rows: repeat(4, 5px);
-}; */
-
-
+.knapp {
+    background-color: aqua;
+}
