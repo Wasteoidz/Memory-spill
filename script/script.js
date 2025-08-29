@@ -60,7 +60,7 @@ function updateView() {
               
         </div>
 
-           <div class="memory-card">
+           <div class="memory-card">2
                 <img class="forside" src="css/pictures/NZP-20071211-117MM_thumb.jpg">
               
         </div>

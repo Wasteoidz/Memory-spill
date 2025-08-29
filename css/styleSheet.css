@@ -13,19 +13,14 @@ box-sizing: border-box;
 body{ /* styling for bakgrunnen*/
     height: 100vh;
     background: bisque;
-    display: flex;
+    
 }
 
 .memory-game { /* styling for brettet*/
-
     margin-left: 45px;
-    height: 650px;
-    width: 600px;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px;
     border-radius: 14px;
- 
 }
 
  .memory-card { /* styling for kortet*/
