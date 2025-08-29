@@ -6,7 +6,7 @@ const app = document.getElementById('spill');
 updateView()
 function updateView() {
         app.innerHTML = /*HTML*/`
-    <h1 class="header">&#128040;Memory game&#128040;</h1>
+    <h1 class="header" title="Click me to play again!" onclick="updateView()">&#128040;Memory game&#128040;</h1>
     
     <section class="memory-game">
 
@@ -66,11 +66,11 @@ function updateView() {
                 <img class="forside" src="css/pictures/NZP-20191024_001RP_thumb.jpg">
                 <img class="bakside" src="css/pictures/question-mark.png">
         </div>
-        <div id="0" class="memory-card">
+        <div id="8" class="memory-card">
                 <img class="forside" src="css/pictures/cartoon-safari-clip-art-orangutan.jpg">
                 <img class="bakside" src="css/pictures/question-mark.png">
         </div>
-        <div id="0" class="memory-card">
+        <div id="8" class="memory-card">
                 <img class="forside" src="css/pictures/cartoon-safari-clip-art-orangutan.jpg">
                 <img class="bakside" src="css/pictures/question-mark.png">
         </div>
@@ -78,6 +78,7 @@ function updateView() {
         
         
         <section>
+        
     `;
 
         const cards = document.querySelectorAll('.memory-card'); /* henter css klassen .memory-card og deklarerer den som cards */
@@ -89,35 +90,48 @@ function updateView() {
 }
 //Controller
 
-// let flippedCard = false;
+// let hasFlippedCard = false;
+// let lockBoard = false;
+// let firstCard, secondCard;
 
-// function flipCard(firstCard, secondCard) { /* flipper kortene */
-//         this.classList.toggle('flip');
-//         if(!flippedCard){
-//         flippedCard = true;
-//         firstCard = this;     
+// function flipCard() {
+//     if (lockBoard) return;
+//     if (this === firstCard) return;
 
-//         console.log(flippedCard, firstCard) 
-//         }
-        
-//         else{
-//                 flippedCard = false;
-//                 secondCard = this;
-//         }
+//     this.classList.toggle('flip');
 
-//         checkIfMatch()
-        
-// function checkIfMatch(){
+//     if (!hasFlippedCard) {
+//         hasFlippedCard = true;
+//         firstCard = this;
+//         return;
+//     }
 
+//     secondCard = this;
+//     checkForMatch();
+// }
 
-//         if(firstCard.dataset.framework === secondCard.dataset.framework){
-//           firstCard.removeEventListener('click', flipCard,);      
-//           secondCard.removeEventListener('click', flipCard,);      
-//         } 
-        
-// }        
-        
-// }; 
+// function checkForMatch() {
+//     // Compare IDs to check for match
+//     if (firstCard.id === secondCard.id) {
+//         // Match! Disable further clicks
+//         firstCard.removeEventListener('click', flipCard);
+//         secondCard.removeEventListener('click', flipCard);
+//         resetBoard();
+//     } else {
+//         // Not a match, flip back after delay
+//         lockBoard = true;
+//         setTimeout(() => {
+//             firstCard.classList.remove('flip');
+//             secondCard.classList.remove('flip');
+//             resetBoard();
+//         }, 1000);
+//     }
+// }
+
+// function resetBoard() {
+//     [hasFlippedCard, lockBoard] = [false, false];
+//     [firstCard, secondCard] = [null, null];
+// }
 
 
 function flipCard() {  /* flipper kortene */

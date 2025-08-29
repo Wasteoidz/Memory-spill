@@ -13,6 +13,9 @@ body{ /* styling for bakgrunnen*/
     background: bisque;
     
 }
+.header {
+        cursor: pointer;
+}
 
 .memory-game { /* styling for brettet*/
     height: 700px;
@@ -25,6 +28,7 @@ body{ /* styling for bakgrunnen*/
 }
 
  .memory-card { /* styling for kortet*/
+    cursor: pointer;
      width: 140px;
      height: 140px;
      margin: 5px;
